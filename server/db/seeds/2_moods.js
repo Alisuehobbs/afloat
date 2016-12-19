@@ -5,17 +5,48 @@ exports.seed = function(knex, Promise) {
             return Promise.all([
                 knex('user_moods').insert({
                   users_id: 1,
-                  mood: 'anxious'
+                  mood: 'anxious',
+                  rating: 'negative'
                 }),
-
+                knex('user_moods').insert({
+                  users_id: 1,
+                  mood: 'hungry',
+                  rating: 'negative'
+                }),
+                knex('user_moods').insert({
+                  users_id: 1,
+                  mood: 'relaxed',
+                  rating: 'positive'
+                }),
                 knex('user_moods').insert({
                   users_id: 2,
-                  mood: 'tired'
+                  mood: 'calm',
+                  rating: 'positive'
                 }),
-
+                knex('user_moods').insert({
+                  users_id: 2,
+                  mood: 'angry',
+                  rating: 'negative'
+                }),
+                knex('user_moods').insert({
+                  users_id: 2,
+                  mood: 'exhausted',
+                  rating: 'negative'
+                }),
                 knex('user_moods').insert({
                   users_id: 3,
-                  mood: 'self-conscious'
+                  mood: 'self-conscious',
+                  rating: 'negative'
+                }),
+                knex('user_moods').insert({
+                  users_id: 3,
+                  mood: 'happy',
+                  rating: 'positive'
+                }),
+                knex('user_moods').insert({
+                  users_id: 3,
+                  mood: 'relaxed',
+                  rating: 'positive'
                 })
             ]);
         });

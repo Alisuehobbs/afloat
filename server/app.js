@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var signup = require('./routes/signup');
 var login = require('./routes/login');
 var correlations = require('./routes/correlations');
+var moods = require('./routes/moods');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.use('/signup', signup);
 app.use('/login', login);
 app.use('/correlations', correlations);
+app.use('/moods', moods);
 
 const port = process.env.PORT || 8000;
 

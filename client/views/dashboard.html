@@ -1,3 +1,10 @@
 <div class="container">
   <h1>Welcome, {{firstName}}</h1>
+
+  <a class="btn btn-default" href="#" role="button">How Are You Feeling?</a>
+
+  <p>Your mood today:</p>
+  <div ng-repeat="mood in moods | orderBy: updated_at">
+    <p>Mood: {{mood.mood}} Rating: {{mood.rating}}</p>
+  </div>
 </div>

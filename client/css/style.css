@@ -1,11 +1,3 @@
-#landing {
-  background-image: url('../images/afloat.jpg');
-  height: 750px;
-  width: auto;
-  background-repeat: no-repeat;
-  padding: 0px;
-}
-
 .error {
   color: red;
 }
