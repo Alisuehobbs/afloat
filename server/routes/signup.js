@@ -3,9 +3,7 @@ var router = express.Router();
 var knex = require('../db/knex');
 var bcrypt = require('bcrypt');
 
-
 router.post('/', function(req, res, next) {
-  console.log('made it to the right route');
     knex('users')
         .where('email', req.body.email)
         .then(function(user) {
@@ -39,6 +37,7 @@ router.post('/', function(req, res, next) {
                       knex('user_activities')
                         .insert(setupActivities, '*')
                         .then(function(data) {
+                          newUser[0].id = data[0].users_id
                           res.json(newUser)
                         })
                     })

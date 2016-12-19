@@ -5,6 +5,12 @@ app.service("UserService", function($resource) {
           method:'POST',
           isArray: true
         }
+      }),
+      login: $resource('login/:id', {id: '@id'}, {
+        'save':  {
+          method:'POST',
+          isArray: false
+        }
       })
   }
 })

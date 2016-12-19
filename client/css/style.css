@@ -5,3 +5,7 @@
   background-repeat: no-repeat;
   padding: 0px;
 }
+
+.error {
+  color: red;
+}
