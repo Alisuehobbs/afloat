@@ -5,8 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var users = require('./routes/users');
-var coorelation = require('./routes/coorelation');
+var signup = require('./routes/signup');
+var login = require('./routes/login');
+var correlations = require('./routes/correlations');
 
 var app = express();
 
@@ -16,10 +17,11 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, './')));
+app.use(express.static(path.join(__dirname, '../client')));
 
-app.use('/users', users);
-app.use('/coorelation', coorelation);
+app.use('/signup', signup);
+app.use('/login', login);
+app.use('/correlations', correlations);
 
 const port = process.env.PORT || 8000;
 
