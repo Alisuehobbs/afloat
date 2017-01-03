@@ -2,9 +2,14 @@
   <h1>Welcome, {{firstName}}</h1>
 
   <a class="btn btn-default" href="#" role="button">How Are You Feeling?</a>
+  <a class="btn btn-default" href="#" role="button">Input Activity</a>
 
-  <p>Your mood today:</p>
-  <div ng-repeat="mood in moods | orderBy: updated_at">
-    <p>Mood: {{mood.mood}} Rating: {{mood.rating}}</p>
-  </div>
+  <h3>Your mood {{timePeriod}}
+
+    <a class="btn btn-default" ng-click=setChartScope("day") role="button">Today</a>
+    <a class="btn btn-default" ng-click=setChartScope("week") role="button">This Week</a>
+    <a class="btn btn-default" ng-click=setChartScope("year") role="button">This Year</a>
+
+<zingchart id="dayChart" zc-json="myJson" zc-height=500 zc-width=600></zingchart>
+
 </div>

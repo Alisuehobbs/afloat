@@ -6,47 +6,50 @@ exports.seed = function(knex, Promise) {
                 knex('user_moods').insert({
                   users_id: 1,
                   mood: 'anxious',
-                  rating: 'negative'
+                  rating: -1,
+                  created_at: '2016-12-20T17:08:09.398Z'
                 }),
                 knex('user_moods').insert({
                   users_id: 1,
                   mood: 'hungry',
-                  rating: 'negative'
+                  rating: -1,
+                  created_at: '2016-12-19T17:08:09.398Z'
                 }),
                 knex('user_moods').insert({
                   users_id: 1,
                   mood: 'relaxed',
-                  rating: 'positive'
+                  rating: 0,
+                  created_at: '2015-12-20T17:08:09.398Z'
                 }),
                 knex('user_moods').insert({
                   users_id: 2,
                   mood: 'calm',
-                  rating: 'positive'
+                  rating: 1
                 }),
                 knex('user_moods').insert({
                   users_id: 2,
                   mood: 'angry',
-                  rating: 'negative'
+                  rating: -1
                 }),
                 knex('user_moods').insert({
                   users_id: 2,
                   mood: 'exhausted',
-                  rating: 'negative'
+                  rating: -1
                 }),
                 knex('user_moods').insert({
                   users_id: 3,
                   mood: 'self-conscious',
-                  rating: 'negative'
+                  rating: -1
                 }),
                 knex('user_moods').insert({
                   users_id: 3,
                   mood: 'happy',
-                  rating: 'positive'
+                  rating: 1
                 }),
                 knex('user_moods').insert({
                   users_id: 3,
                   mood: 'relaxed',
-                  rating: 'positive'
+                  rating: 0
                 })
             ]);
         });

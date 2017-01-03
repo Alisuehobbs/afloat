@@ -1,4 +1,4 @@
-var app = angular.module("afloat", ['ngAnimate', 'ngRoute', 'ngResource', 'ngCookies'])
+var app = angular.module("afloat", ['ngAnimate', 'ngRoute', 'ngResource', 'ngCookies', 'zingchart-angularjs'])
 
 app.config(function($routeProvider) {
     $routeProvider

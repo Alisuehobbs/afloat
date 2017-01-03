@@ -3,7 +3,7 @@ exports.up = function(knex) {
         table.increments();
         table.integer('users_id').notNullable().references('id').inTable('users').onDelete('CASCADE');
         table.string('mood').notNullable();
-        table.string('rating').notNullable();
+        table.integer('rating').notNullable();
         table.timestamps(true, true);
     })
 }
